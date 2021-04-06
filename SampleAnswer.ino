@@ -36,21 +36,21 @@ void loop() {
  {
   Speed = Speed - 10; //speed lowered by 10 units
   digitalWrite(4,HIGH); // red light on
-  digitalWrite(5,LOW); //
-  digitalWrite(10,LOW); //
+  digitalWrite(5,LOW); // yellow off
+  digitalWrite(10,LOW); // green off
  }
  else if( intensity < (0.9*reqIntensity)) // intensity is less than 10 percent of required intensity
  {
   Speed = Speed + 10; //increase speed
   digitalWrite(10,HIGH); // yellow light on
-  digitalWrite(5,LOW); //
-  digitalWrite(4,LOW); //
+  digitalWrite(5,LOW); //red off
+  digitalWrite(4,LOW); // green off
  }
  else // otherwise the intensity has to be within 10 percent of the required intensity, no changes to speed
  {
   digitalWrite(5,HIGH); // green light on
-  digitalWrite(4,LOW); //
-  digitalWrite(10,LOW); //
+  digitalWrite(4,LOW); //red off
+  digitalWrite(10,LOW); // yellow off
  }
 
 }
